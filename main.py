@@ -12,7 +12,7 @@ def getGravatarInfo(email):
     request = requests.get(json_link)
     result = request.json()['entry'][0]
 
-    return result
+    return {'result' : result}
 
 if len(sys.argv) < 2:
     query = input("Enter email: ")
